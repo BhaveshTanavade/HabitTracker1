@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Habits</title>
+</head>
+<body>
+    <h1>All Current Habits</h1>
+    <ul>
+        <% habits.forEach(habit => { %>
+            <div>
+                <li>
+                    <a href="habits/update/<%= habit._id %>"> <%= habit.name %> </a> - <%= habit.status %> - <%= habit.date.toISOString() %>
+                    <button onclick="deleteHabit('<%= habit._id %>')">Delete</button>
+                </li>
+            </div> 
+        <% }); %>
+    </ul>
+    <a href="/habits/add">Add New Habit</a>
+    <script src="/script.js"></script>
+</body>
+</html>
+
+

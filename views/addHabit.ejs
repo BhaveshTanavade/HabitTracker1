@@ -1,0 +1,18 @@
+<!-- views/addHabit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Habit</title>
+</head>
+<body>
+    <h1>Add New Habit</h1>
+    <form action="/habits/add" method="POST">
+        <label for="habitName">Habit Name:</label>
+        <input type="text" id="habitName" name="name" required>
+        <button type="submit">Add Habit</button>
+    </form>
+</body>
+</html>

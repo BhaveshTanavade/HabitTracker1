@@ -1,0 +1,21 @@
+<!-- views/updateHabit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Habit</title>
+</head>
+<body>
+  <h1>Update Habit</h1>
+  <form action="/habits/update/<%= habit._id %>" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= habit.name %>" readonly>
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+      <option value="done" <% if (habit.status === 'done') { %> selected <% } %>>Done</option>
+      <option value="not done" <% if (habit.status === 'not done') { %> selected <% } %>>Not Done</option>
+    </select>
+    <button type="submit">Update Habit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- views/habitDetail.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Detail</title>
+</head>
+<body>
+    <h1>Habit Status for Past 7 Days</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        <% pastStatus.forEach(status => { %>
+            <tr>
+                <td><%= status.date %></td>
+                <td><%= status.status %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
