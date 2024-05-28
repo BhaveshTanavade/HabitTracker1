@@ -22,4 +22,4 @@ app.listen(3000,async ()=>{
     
 });
 
-app.get("/habits",getAllHabits);
+app.get("/",getAllHabits);
